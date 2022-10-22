@@ -1,55 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Cube</title>
-</head>
-<body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js"></script>
-
+<html class="translated-ltr"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="transluscent">
+  
+    <title>Visualización de Renault Espace</title>
+    <link rel="stylesheet" href="https://renaultespace.littleworkshop.fr/css/main.css" type="text/css">
+    <link rel="icon" href="https://renaultespace.littleworkshop.fr/img/favicon.png">
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"></head>
+  <body style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: auto;">
+    <div id="container"><canvas width="885" height="795" style="width: 885px; height: 795px;"></canvas></div>
+    <div class="fps-counter"></div>
+  
+    <div id="loading" class="hidden">
+      <div class="title-container">
+        <div class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuevo Renault Espace</font></font></div>
+        <div class="subtitle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prototipo de visualizador WebGL</font></font></div>
+      </div>
+      <div class="progress">
+        <div class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cargando por favor espere</font></font></div>
+        <div class="bar"><div class="fill js-fill" style="width: 100%;"></div></div>
+      </div>
+    </div>
+  
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://renaultespace.littleworkshop.fr/js/detector.js"></script>
+    <script type="text/javascript" src="https://renaultespace.littleworkshop.fr/js/demo.min.js?v=2"></script>
     <script>
-
-        //creating scene
-        var scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x2a3b4c);
-
-        //add camera
-        var camera = new THREE.PerspectiveCamera(
-            75,
-            window.innerWidth/window.innerHeight
-        );
-
-        //renderer
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        //add geometry
-        var geometry = new THREE.BoxGeometry();
-        var material = new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true});
-        var cube = new THREE.Mesh(geometry, material);
-
-        scene.add(cube);
-
-        camera.position.z = 5;
-
-        
-        //animation
-        var animate = function(){
-            requestAnimationFrame(animate);
-
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-
-        }
-
-        animate();
-
-    </script>
-
-</body>
-</html>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+      ga('create', 'UA-10740897-5', 'auto');
+      ga('send', 'pageview');
+    </script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Traductor de Google"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+  
+  
+  
+  <div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><div class="main">
+    <div class="js-hud-container hud visible"><div class="interior">
+    <div class="main-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuevo Renault </font></font><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Espace</font></font></span></div>
+    <div class="lights-toggle js-lights-toggle permanent"></div>
+    <div class="sound-toggle js-sound-toggle permanent show-from-interior disabled"></div>
+    <div class="camera-toggle js-camera-toggle permanent"></div>
+    <div class="view-toggle js-view-toggle"></div>
+  <!--   <div class="logo day permanent show-from-interior"></div> -->
+    <!-- <div class="logo night permanent show-from-interior"></div> -->
+    <div class="about-block">
+      <div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desarrollo por </font></font><a href="http://www.littleworkshop.fr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Little Workshop</font></font></a></div>
+      <div><span class="about-link js-about-toggle"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">creditos completos</font></font></span></div>
+    </div>
+    <!-- <div class="about-toggle js-about-toggle"></div> -->
+    <!-- <div class="share"></div> -->
+  </div></div>
+    <div class="js-interior-container interior visible"><div>
+    <div class="exit js-exit"></div>
+    <div class="picker js-scroller">
+        <div class="scroller">
+  
+        </div>
+    </div>
+  </div></div>
+    <div class="js-about-container about"><div>
+    <div class="inner">
+      <div class="exit js-exit"></div>
+      <div class="content">
+        <div class="content-inner">
+          <div class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuevo Renault </font></font><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Espace</font></font></span></div>
+          <div class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Este es un prototipo de visualizador de automóviles WebGL que muestra el Nuevo Renault Espace 2015. </font></font><br>
+          <a target="_blank" href="http://www.littleworkshop.fr/espace.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lea más sobre este proyecto</font></font></a></div>
+          <div class="credits">
+            <div class="credit">
+              <div class="job"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Líder de diseño y proyecto</font></font></div>
+              <div class="name"><a target="_blank" href="http://www.renault.fr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">renault</font></font></a></div>
+            </div>
+            <div class="credit">
+              <div class="job"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desarrollo</font></font></div>
+              <div class="name"><a target="_blank" href="http://www.littleworkshop.fr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pequeño taller</font></font></a></div>
+            </div>
+            <div class="credit">
+              <div class="job"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modelos y Animaciones</font></font></div>
+              <div class="name"><a target="_blank" href="http://www.kylotonngames.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Juegos de Kyloton</font></font></a></div>
+            </div>
+            <div class="credit">
+              <div class="job"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Activos de origen</font></font></div>
+              <div class="name"><a target="_blank" href="http://en.lumiscaphe.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">luminiscafo</font></font></a></div>
+            </div>
+            <div class="credit">
+              <div class="job"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Diseño de sonido</font></font></div>
+              <div class="name"><a target="_blank" href="http://www.sixiemeson.com/en/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sixieme hijo</font></font></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  </div></body></html>
